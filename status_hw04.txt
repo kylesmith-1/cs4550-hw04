@@ -1,0 +1,48 @@
+Please fill in answers to the questions below:
+
+
+1. What's your name?
+
+Kyle Smith
+
+2. What hostname did you deploy your app to?
+
+hw04.devcalibur.com
+
+3. What's the URL of your git for this assignment?
+
+https://github.com/kylesmith-1/cs4550-hw04
+
+4. How much of the functionality did you complete?
+
+All of it, I believe.
+
+5. Did you successfully deploy? If not, what's broken?
+
+Yes, as in it works on hw04.devcalibur.com.
+However, the styling does not seem to work right. 
+I was having issues with `npm install` in the assets
+directory. 
+
+6. How comfortable do you feel with Elixir now?
+
+Fairly, I found it to have a high learning curve. Though I
+definitely feel much better equiped to use it and the
+documentation now vs when I started this assignment. 
+
+7. Which parts of this assignment did you have trouble with, if any?
+
+Could not get styling to work on deploy. Also I found Elixir
+to be a pain to work with. At least I found the learning curve to 
+be high.
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Task 1
+ - Task 2
+ - Task 3
+ - Task 4
+ - Task 5
+ - Task 6
+ - Task 7
+ - Task 8
