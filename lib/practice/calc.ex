@@ -39,6 +39,26 @@ defmodule Practice.Calc do
     end
   end
 
+  def evalPostfix(postfix, stack) do
+    if postfix == [] do
+      stack
+    else
+      cur = hd(postfix)
+      if (op_or_num(cur) == :num) do #num
+        evalPostfix(tl(postfix), [parse_float(cur) | stack])
+      else #op
+        val1 = (hd(stack))
+        val2 = (hd(tl(stack)))
+        cond do
+          cur == "+" -> evalPostfix(tl(postfix), [val2 + val1 | tl(tl(stack))])
+          cur == "-" -> evalPostfix(tl(postfix), [val2 - val1 | tl(tl(stack))])
+          cur == "*" -> evalPostfix(tl(postfix), [val2 * val1 | tl(tl(stack))])
+          cur == "/" -> evalPostfix(tl(postfix), [val2 / val1 | tl(tl(stack))])
+        end
+      end
+    end
+  end
+
   def calc(expr) do
     # This should handle +,-,*,/ with order of operations,
     # but doesn't need to handle parens.
@@ -46,6 +66,7 @@ defmodule Practice.Calc do
     |> String.split(~r/\s+/)
     |> Enum.map(fn(x) -> {op_or_num(x), x} end)
     |> toPostfix([], [])
+    |> evalPostfix([])
 
     #|> hd
     #|> parse_float
