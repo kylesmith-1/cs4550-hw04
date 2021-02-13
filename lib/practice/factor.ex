@@ -7,3 +7,4 @@ defmodule Practice.Factor do
     end
   end
 end
+

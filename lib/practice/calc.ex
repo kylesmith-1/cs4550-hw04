@@ -41,7 +41,7 @@ defmodule Practice.Calc do
 
   def evalPostfix(postfix, stack) do
     if postfix == [] do
-      stack
+      hd(stack)
     else
       cur = hd(postfix)
       if (op_or_num(cur) == :num) do #num

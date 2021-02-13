@@ -22,5 +22,8 @@ defmodule Practice do
     Practice.Factor.factor(2, x)
   end
 
-  # TODO: Add a palindrome? function.
+  # TODO: Add a palindrome? function. DONE
+  def palindrome?(word) do
+    String.split(word, "", trim: true) == Enum.reverse(String.split(word, "", trim: true))
+  end
 end
